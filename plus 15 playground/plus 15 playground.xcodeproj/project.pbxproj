@@ -13,6 +13,7 @@
 		7A6A53E626EDD2FC00A3E9A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A53E426EDD2FC00A3E9A6 /* Main.storyboard */; };
 		7A6A53E826EDD30000A3E9A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A53E726EDD30000A3E9A6 /* Assets.xcassets */; };
 		7A6A53EB26EDD30000A3E9A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A53E926EDD30000A3E9A6 /* LaunchScreen.storyboard */; };
+		7AD3726027710AFE00891D6E /* plus15.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3725F27710AFE00891D6E /* plus15.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7A6A53E726EDD30000A3E9A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A6A53EA26EDD30000A3E9A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A6A53EC26EDD30000A3E9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD3725F27710AFE00891D6E /* plus15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plus15.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7A6A53DD26EDD2FC00A3E9A6 /* plus 15 playground */ = {
 			isa = PBXGroup;
 			children = (
+				7AD3725C27703CCE00891D6E /* Model */,
 				7A6A53DE26EDD2FC00A3E9A6 /* AppDelegate.swift */,
 				7A6A53E026EDD2FC00A3E9A6 /* SceneDelegate.swift */,
 				7A6A53E226EDD2FC00A3E9A6 /* ViewController.swift */,
@@ -63,8 +66,16 @@
 				7A6A53E726EDD30000A3E9A6 /* Assets.xcassets */,
 				7A6A53E926EDD30000A3E9A6 /* LaunchScreen.storyboard */,
 				7A6A53EC26EDD30000A3E9A6 /* Info.plist */,
+				7AD3725F27710AFE00891D6E /* plus15.json */,
 			);
 			path = "plus 15 playground";
+			sourceTree = "<group>";
+		};
+		7AD3725C27703CCE00891D6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A6A53EB26EDD30000A3E9A6 /* LaunchScreen.storyboard in Resources */,
+				7AD3726027710AFE00891D6E /* plus15.json in Resources */,
 				7A6A53E826EDD30000A3E9A6 /* Assets.xcassets in Resources */,
 				7A6A53E626EDD2FC00A3E9A6 /* Main.storyboard in Resources */,
 			);
