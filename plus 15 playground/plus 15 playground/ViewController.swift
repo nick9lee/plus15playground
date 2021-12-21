@@ -15,12 +15,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         
+        mapView.delegate = self
+        
         //center map on region
         mapView.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.044916, longitude: -114.070336), span: MKCoordinateSpan(latitudeDelta: 0.06, longitudeDelta: 0.06))
         
         mapView.addOverlays(self.parseGeoJSON())
         
+        
+        
         super.viewDidLoad()
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolygon {
+            let polygonRenderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
+            polygonRenderer.lineWidth = 1.0
+            polygonRenderer.strokeColor = UIColor.purple
+            polygonRenderer.fillColor = UIColor.red
+            return polygonRenderer
+        }
+        
+        return MKOverlayRenderer()
     }
     
     func parseGeoJSON() -> [MKOverlay] {
@@ -40,7 +56,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         for item in geoJson {
             if let feature = item as? MKGeoJSONFeature {
                 for geo in feature.geometry {
-                    if let polygon = geo as? MKMultiPolygon {
+                    if let polygon = geo as? MKPolygon {
                         overlays.append(polygon)
                     }
                 }
