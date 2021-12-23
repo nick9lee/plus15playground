@@ -20,7 +20,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         
         //center map on region
-        mapView.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.044916, longitude: -114.070336), span: MKCoordinateSpan(latitudeDelta: 0.06, longitudeDelta: 0.06))
+        mapView.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.046585247614, longitude: -114.075468099458), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
         
         mapView.addOverlays(self.parseGeoJSON())
         
