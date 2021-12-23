@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
     
+    var count = 1;
+    
     var points = [ [41, -109.05], [41, -102.05], [37, -102.05], [37, -109.05] ];
     
     override func viewDidLoad() {
@@ -32,7 +34,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
             let polygonRenderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
             polygonRenderer.lineWidth = 1.0
             polygonRenderer.strokeColor = UIColor.purple
-            polygonRenderer.fillColor = UIColor.red
+            if count == 1 {
+                polygonRenderer.fillColor = UIColor.red
+                count = count + 1
+            } else {
+                polygonRenderer.fillColor = UIColor.blue
+            }
             return polygonRenderer
         }
         
