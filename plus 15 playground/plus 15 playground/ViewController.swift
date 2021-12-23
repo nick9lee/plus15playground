@@ -20,7 +20,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         
         //center map on region
-        mapView.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.046585247614, longitude: -114.075468099458), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+        mapView.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.046585247614, longitude: -114.075468099458), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         
         mapView.addOverlays(self.parseGeoJSON())
         
@@ -36,13 +36,24 @@ class ViewController: UIViewController, MKMapViewDelegate {
             polygonRenderer.strokeColor = UIColor.purple
             if count == 1 {
                 polygonRenderer.fillColor = UIColor.red
-                count = count + 1
-            } else {
+            } else if count == 2 {
                 polygonRenderer.fillColor = UIColor.blue
+            } else if count == 3 {
+                polygonRenderer.fillColor = UIColor.purple
+            } else if count == 4 {
+                polygonRenderer.fillColor = UIColor.green
+            } else if count == 5 {
+                polygonRenderer.fillColor = UIColor.yellow
+            } else if count == 6 {
+                polygonRenderer.fillColor = UIColor.orange
+            } else if count == 7 {
+                polygonRenderer.fillColor = UIColor.brown
+            } else {
+                polygonRenderer.fillColor = UIColor.black
             }
+            count = count + 1
             return polygonRenderer
         }
-        
         return MKOverlayRenderer()
     }
     
